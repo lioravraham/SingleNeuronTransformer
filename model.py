@@ -448,14 +448,13 @@ if __name__ == "__main__":
     print('----------------------------')
 
     # ========================== DATASET SETUP ==========================
-    models_folder = '/ems/elsc-labs/london-m/lior.avraham1/layer5/david_model_empty' # for the model with david's changes
+    models_folder = '/ems/elsc-labs/london-m/lior.avraham1/SingleNeuronTransformer/david_model_empty' # for the model with david's changes
     os.makedirs(models_folder, exist_ok=True)
 
     train_time_window_size = 1024
     valid_time_window_size = 1024
     batch_size = 8
-    # preload_data = True
-    # preload_data = False
+
     dataset_folder = "/ems/elsc-labs/segev-i/ido.aizenbud/Data/neuron_as_deep_net2_data/Rat_L5b_PC_2_Hay_160um_wide_weighted1_5_1_wide_fr5_mc200_pipeline_4/simulation_dataset"
 
     valid_name = 'test'
@@ -898,7 +897,7 @@ if __name__ == "__main__":
         print('----------------------------------------------------')
 
     # =======================  PLOTTING (iteration-based)  =======================
-    save_dir_learning_curves = '/ems/elsc-labs/london-m/lior.avraham1/layer5/training_net_job_output2/learning_curves'
+    save_dir_learning_curves = '/ems/elsc-labs/london-m/lior.avraham1/layeSingleNeuronTransformerr5/training_net_job_output3/learning_curves'
     os.makedirs(save_dir_learning_curves, exist_ok=True)
     matplotlib.use('Agg')
 
@@ -1116,7 +1115,7 @@ if __name__ == "__main__":
 
     def plot_evaluation_figures(metrics_dict, voltage_granularity=8, voltage_setpoint=V_bias):
         """Create visualization of model performance metrics."""
-        save_dir = '/ems/elsc-labs/london-m/lior.avraham1/layer5/training_net_job_output2/evaluation_figures'
+        save_dir = '/ems/elsc-labs/london-m/lior.avraham1/SingleNeuronTransformer/training_net_job_output3/evaluation_figures'
         os.makedirs(save_dir, exist_ok=True)
         matplotlib.use('Agg')
 
@@ -1270,7 +1269,7 @@ if __name__ == "__main__":
 
     print('--------------------------------------------------')
 
-    save_trace_dir = '/ems/elsc-labs/london-m/lior.avraham1/layer5/training_net_job_output2/trace_graphs'
+    save_trace_dir = '/ems/elsc-labs/london-m/lior.avraham1/SingleNeuronTransformer/training_net_job_output3/trace_graphs'
     os.makedirs(save_trace_dir, exist_ok=True)
 
     n_samples = y_spikes_gt.shape[0] if y_spikes_gt.ndim > 1 else 1
